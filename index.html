@@ -1,13 +1,70 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <script src="3rdParty/sort.js"></script>
+    <script src="3rdParty/search.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
 <body>
 
-    <audio controls>
-        <source src="Kalangidathe.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <h2>My Playlist</h2>
 
+    <input type="text" id="myInput" onkeyup="search()" placeholder="Search for songs by name/artist.."
+        title="Type in a name">
+
+    <table id="myTable">
+        <tr class="header">
+            <th onclick="sortTable(0)" style="width:60%;">Name</th>
+            <th onclick="sortTable(1)" style="width:60%;">Artist</th>
+            <th style="width:40%;">Song</th>
+        </tr>
+        <tr>
+            <td>Kalangidathe</td>
+            <td>Kalangidathe</td>
+            <td><audio controls loop>
+                    <source src="music/Gospel/Kalangidathe.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio></td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbkop</td>
+            <td>Sweden</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>UK</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Koniglich Essen</td>
+            <td>Germany</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Canada</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Canada</td>
+            <td>Italy</td>
+        </tr>
+        <tr>
+            <td>North/South</td>
+            <td>Canada</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Paris specialites</td>
+            <td>Canada</td>
+            <td>France</td>
+        </tr>
+    </table>
 </body>
 
 </html>
